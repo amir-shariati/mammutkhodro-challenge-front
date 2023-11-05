@@ -1,6 +1,6 @@
 import {Grid, Paper,} from "@material-ui/core";
 import {homeStyles} from "./style";
-import {CryptoPortfolioTracker} from "../../components/CryptoPortfolioTracker/cryptoPortfolioTracker";
+import {PortfolioTracker} from "../../components/portfolioTracker/portfolioTracker";
 
 
 
@@ -24,7 +24,7 @@ const Home = (props) => {
 
                     <Grid item xs={10} md={10} lg={10} xl={10}>
                         <Paper classname={classes.homeBg} >
-                            <CryptoPortfolioTracker />
+                            <PortfolioTracker />
                         </Paper>
                     </Grid>
 
