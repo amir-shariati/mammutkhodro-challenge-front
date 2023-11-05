@@ -1,0 +1,19 @@
+
+
+@font-face {
+    font-family: 'msi';
+    src: url('assets/fonts/Vazir.eot') format('eot');
+    src : url('assets/fonts/Vazir.ttf') format('truetype'),
+    url('assets/fonts/Vazir.woff') format('woff');
+}
+
+*{
+    font-family: 'MyVazir', sans-serif;
+}
+
+body{
+    direction: ltr;
+    /*text-align: right;*/
+    font-family: 'MyVazir', sans-serif;
+    background-color: #1C2837;
+}
