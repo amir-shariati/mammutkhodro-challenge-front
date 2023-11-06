@@ -1,11 +1,13 @@
-import {Grid, Paper,} from "@material-ui/core";
+import axios from "axios"
+import {useEffect, useState} from "react";
+import {Grid, Paper, Typography,} from "@material-ui/core";
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import ReactModal from 'react-modal';
 import {homeStyles} from "./style";
 import {PortfolioTracker} from "../../components/portfolioTracker/portfolioTracker";
-
-
-
-
-
+import {url_portfolio_list} from "../../config";
+import {BarLoader, ClipLoader, MoonLoader} from "react-spinners";
 
 
 const Home = (props) => {
