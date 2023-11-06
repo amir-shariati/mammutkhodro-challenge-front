@@ -68,6 +68,26 @@ const homeStyles = makeStyles((theme) => ({
         marginLeft:'5%',
         textShadow:'3px 3px #fff'
     },
+    titleCard:{
+        backgroundColor:'#253344',
+        maxHeight: 400,
+        width:'100%',
+        // marginTop:80,
+    },
+    titleText:{
+        fontSize:24,
+        fontWeight: 'bold' ,
+        color:'#fff',
+        paddingLeft:30,
+        paddingTop:30
+    },
+    text:{
+        fontSize:16,
+        color:'#fff',
+        paddingLeft:30,
+        paddingTop:30,
+        paddingBottom:30
+    },
     paperCard:{
         backgroundColor:'#253344',
         height: 300,
