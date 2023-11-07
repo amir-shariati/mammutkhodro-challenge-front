@@ -95,6 +95,40 @@ export const BuyTicker =(props)=>{
                     </Grid>
                 </Grid>
                 <Divider />
+
+                <Grid container >
+                    <Grid item xs={12} md={12} lg={12} xl={12}>
+                        <TextField id="price" label="Price"
+                                   value={price}
+                                   onChange={handlePriceOnChange}
+                        />
+                    </Grid>
+                </Grid>
+
+                <TextField
+                    id="datetime-local"
+                    label="Next appointment"
+                    type="datetime-local"
+                    defaultValue="2023-10-24T10:30"
+                    className={classes.dateTimeTextField}
+                    InputLabelProps={{
+                        shrink: true,
+                    }}
+                    onChange={handleTransactionDateOnChange}
+                />
+
+                <Button variant="contained" color="primary"
+                        style={{marginBottom:20, marginLeft:30, marginTop:20}}
+                        onClick={handleBuyStock}
+                        disabled={disableBuyBtnStock}
+                >
+                    {/*{isLoadingAddBtnPortfolio? <ClipLoader size={20} color="#36d7b7" />: null}*/}
+                    <ClipLoader size={20} color="#36d7b7" loading={isLoadingBuyBtnStock}/>
+                    <span style={{marginLeft:10}}>
+                        Buy
+                    </span>
+                </Button>
+
             </Grid>
         </>
     )
