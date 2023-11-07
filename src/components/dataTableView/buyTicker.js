@@ -23,8 +23,57 @@ export const BuyTicker =(props)=>{
     const [disableBuyBtnStock, setDisableBuyBtnStock] = useState(false)
 
     const closeButtonHandler =()=>{
-        handleCloseEditTicker()
+        handleCloseBuyTicker()
     }
+
+    const handlePriceOnChange = (e) => {
+        setPrice(e.target.value)
+    }
+
+    const handleTransactionDateOnChange = (e) => {
+        setTransactionDate(e.target.value)
+    }
+
+
+    const handleBuyStock = (e) => {
+
+        console.log('BuyTicker, stockItemID: ', stockItemID)
+        console.log('BuyTicker, transactionDate: ', transactionDate)
+        console.log('BuyTicker, price: ', price)
+
+        if (price !== null && transactionDate !== null){
+            setIsLoadingBuyBtnStock(true)
+            setDisableBuyBtnStock(true)
+            axios({
+                url: `${url_stock_item_buy}`,
+                method: "POST",
+                data: {
+                    stock_item_id: stockItemID,
+                    price: price,
+                    transaction_date: transactionDate,
+                }
+
+            }).then( res => {
+                setIsLoadingBuyBtnStock(false)
+                setDisableBuyBtnStock(false)
+                // setIsLoading(false)
+                if(res.status == 200){
+                    console.log('BuyTicker, stock-item: ', res.data)
+                    // setPortfolioResult(res.data)
+
+                    closeButtonHandler()
+
+                }
+            }).catch( error => {
+                setIsLoadingBuyBtnStock(false)
+                setDisableBuyBtnStock(false)
+                // setIsLoading(false)
+                console.log('BuyTicker, handleBuyStock error: ', error)
+            })
+        }
+    }
+
+
     return(
         <>
             <Grid item  xs={12} md={12} lg={12} >
