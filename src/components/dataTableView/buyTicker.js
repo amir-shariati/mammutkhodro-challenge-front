@@ -10,8 +10,9 @@ import axios from "axios";
 import {url_stock_item_buy} from "../../config";
 
 
+export const BuyTicker =(props)=>{
 
-export const EditTicker =(props)=>{
+    const {handleCloseBuyTicker, stockItemID} = props
 
     const {handleCloseEditTicker} = props
 
