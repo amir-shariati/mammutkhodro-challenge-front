@@ -14,7 +14,13 @@ export const BuyTicker =(props)=>{
 
     const {handleCloseBuyTicker, stockItemID} = props
 
-    const {handleCloseEditTicker} = props
+    const classes = tableStyles()
+
+    const [price, setPrice] = useState(null)
+    const [transactionDate, setTransactionDate] = useState(null)
+
+    const [isLoadingBuyBtnStock, setIsLoadingBuyBtnStock] = useState(false)
+    const [disableBuyBtnStock, setDisableBuyBtnStock] = useState(false)
 
     const closeButtonHandler =()=>{
         handleCloseEditTicker()
