@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css'
-// import {Provider} from "react-redux";
+import {Provider} from "react-redux";
 // import {BrowserRouter as Router} from "react-router-dom";
-// import {store} from './store'
+import {store} from './store'
 // import {AppRoute} from './routes'
+import {ToastContainer} from "react-toastify";
 import {Home} from "./pages";
 import {Navbar} from "./components/header/navbar";
 
