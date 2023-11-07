@@ -81,7 +81,7 @@ export const BuyTicker =(props)=>{
                 <Grid container >
                     <Grid item lg={8}  >
                         <Typography  >
-                            <strong>Edit Coin</strong>
+                            <strong>Buy Ticker</strong>
                         </Typography>
 
                     </Grid>
