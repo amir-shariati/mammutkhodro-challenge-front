@@ -1,7 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Divider, Grid, Typography} from "@mui/material";
 import IconButton from "@material-ui/core/IconButton";
 import ClearIcon from '@material-ui/icons/Clear';
+import TextField from "@material-ui/core/TextField";
+import {tableStyles} from "./style";
+import Button from "@material-ui/core/Button";
+import {ClipLoader} from "react-spinners";
+import axios from "axios";
+import {url_stock_item_buy} from "../../config";
+
 
 
 export const EditTicker =(props)=>{
