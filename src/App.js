@@ -15,10 +15,18 @@ function App(props) {
         //     <AppRoute/>
         // </Router>
         // </Provider>
-        <>
-            <Navbar />
-            <Home  />
-        </>
+
+        <Provider store={store}>
+            <ToastContainer />
+            <>
+                <Navbar />
+                <Home  />
+            </>
+        </Provider>
+        // <>
+        //     <Navbar />
+        //     <Home  />
+        // </>
 
 
     );
