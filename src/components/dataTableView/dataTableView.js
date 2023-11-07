@@ -27,7 +27,14 @@ export const DataTableView = (props) =>{
 
     const classes = portfolioStyles()
 
-    const [openEditTicker, setOpenEditTicker] = useState(false)
+    const [openBuyTicker, setOpenBuyTicker] = useState(false)
+    const [openSellTicker, setOpenSellTicker] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
+    const [isStockItemEmpty, setIsStockItemEmpty] = useState(false)
+
+    const [openAddStockModal, setOpenAddStockModal] = useState(false)
+    const [stockItemList, setStockItemList] = useState([])
+    const [stockItemID, setStockItemID] = useState(null)
 
 
 
