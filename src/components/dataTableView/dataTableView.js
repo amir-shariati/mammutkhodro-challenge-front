@@ -11,7 +11,16 @@ import TableRow from '@material-ui/core/TableRow';
 import {portfolioStyles} from "../portfolioTracker/style";
 import IconButton from "@material-ui/core/IconButton";
 import EditIcon from '@material-ui/icons/Edit';
-import {EditTicker} from "./editTicker";
+import {BuyTicker} from "./buyTicker";
+import axios from "axios";
+import {url_stock_item_list} from "../../config";
+import {BarLoader} from "react-spinners";
+import Button from "@material-ui/core/Button";
+import {Grid} from "@mui/material";
+import {AddStock} from "./addStock";
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import {SellTicker} from "./sellTicker";
 
 
 export const DataTableView = (props) =>{
