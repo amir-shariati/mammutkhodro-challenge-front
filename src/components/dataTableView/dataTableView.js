@@ -90,22 +90,41 @@ export const DataTableView = (props) =>{
 
     return(
         <>
-            <TableContainer >
-                <Table className={classes.table} aria-label="simple table">
-                    <TableHead >
-                        <TableRow>
-                            <TableCell> </TableCell>
-                            <TableCell style={{color:'#fff'}} align="right">NAME</TableCell>
-                            <TableCell style={{color:'#fff'}} align="right">HOLDINGS</TableCell>
-                            <TableCell style={{color:'#fff'}} align="right">QUANTITY</TableCell>
-                            <TableCell style={{color:'#fff'}} align="right">SHARE</TableCell>
-                            <TableCell style={{color:'#fff'}} align="right">24H PROFIT/LOSS</TableCell>
-                            <TableCell style={{color:'#fff'}} align="right">PRICE</TableCell>
-                            <TableCell style={{color:'#fff'}} align="right">24H CHANGE</TableCell>
-                            <TableCell style={{color:'#fff'}} align="right">ACTION</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
+            {
+                isLoading ? (
+                    <BarLoader color="#36d7b7" width={'100%'} height={4} />
+                ):(
+                    isStockItemEmpty ? (
+                        <>
+                            <Grid container >
+                                <Grid item xs={12} md={12} lg={12} xl={12} style={{display:"flex" , justifyContent:"center", alignItems:"center", }}>
+                                    <Button variant="contained" color="primary"
+                                            style={{marginTop:30, width:"25%"}}
+                                            onClick={handleAddStock}
+                                    >
+                                        + Add Stock
+                                    </Button>
+                                </Grid>
+                            </Grid>
+
+                        </>
+                    ):(
+                        <>
+                            <TableContainer>
+                                <Table className={classes.table} aria-label="simple table">
+
+                                    <TableHead >
+                                        <TableRow>
+                                            <TableCell> </TableCell>
+                                            <TableCell style={{color:'#fff'}} align="right">NAME</TableCell>
+                                            <TableCell style={{color:'#fff'}} align="right">AMOUNT</TableCell>
+                                            <TableCell style={{color:'#fff'}} align="right">STOCK</TableCell>
+                                            <TableCell style={{color:'#fff'}} align="right">BUY</TableCell>
+                                            <TableCell style={{color:'#fff'}} align="right">SELL</TableCell>
+                                        </TableRow>
+                                    </TableHead>
+
+                                    <TableBody>
 
                         <TableRow >
                             <TableCell style={{color:'#fff'}} component="th" scope="row">
