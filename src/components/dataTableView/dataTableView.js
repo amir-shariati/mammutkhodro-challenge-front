@@ -254,9 +254,12 @@ export const DataTableView = (props) =>{
                     }
                 }}
             >
-                <EditTicker
-                    handleCloseEditTicker={handleCloseEditTicker}
-                />
+                <>
+                    <SellTicker
+                        handleOpenSellTicker={handleOpenSellTicker}
+                        stockItemID={stockItemID}
+                    />
+                </>
             </ReactModal>
         </>
     )
