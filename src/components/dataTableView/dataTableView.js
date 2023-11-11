@@ -63,8 +63,13 @@ export const DataTableView = (props) =>{
 
 //----------------- open add Close modal ------------------------ //
 
-    const handleOpenEditTicker = ()=>{
-        setOpenEditTicker(true)
+    const handleOpenBuyTicker = (e, stock_item_id)=>{
+        console.log('DataTableView, handleOpenBuyTicker, stock_item_id: ', stock_item_id)
+        setOpenBuyTicker(true)
+        setStockItemID(stock_item_id)
+    }
+    const handleCloseBuyTicker=()=>{
+        setOpenBuyTicker(false)
     }
 
     const handleCloseEditTicker=()=>{
