@@ -178,8 +178,8 @@ export const DataTableView = (props) =>{
             }
 
             <ReactModal
-                isOpen={openEditTicker}
-                onRequestClose={handleCloseEditTicker}
+                isOpen={openAddStockModal}
+                onRequestClose={handleAddStockClose}
                 className="myModal"
                 overlayClassName="modalOverlay"
                 closeTimeoutMS={500}
