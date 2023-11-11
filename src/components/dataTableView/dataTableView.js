@@ -157,9 +157,26 @@ export const DataTableView = (props) =>{
                                             ))
                                         }
 
-                    </TableBody>
-                </Table>
-            </TableContainer>
+                                    </TableBody>
+
+                                </Table>
+                            </TableContainer>
+
+                            <Grid container >
+                                <Grid item xs={12} md={12} lg={12} xl={12} style={{display:"flex" , justifyContent:"center", alignItems:"center", }}>
+                                    <Button variant="contained" color="primary"
+                                            style={{marginTop:30, width:"25%"}}
+                                            onClick={handleAddStock}
+                                    >
+                                        + Add Stock
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </>
+                    )
+                )
+            }
+
             <ReactModal
                 isOpen={openEditTicker}
                 onRequestClose={handleCloseEditTicker}
