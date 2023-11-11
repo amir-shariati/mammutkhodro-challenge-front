@@ -183,6 +183,76 @@ export const DataTableView = (props) =>{
                 className="myModal"
                 overlayClassName="modalOverlay"
                 closeTimeoutMS={500}
+                // shouldCloseOnOverlayClick={false}
+                style={{
+                    content: {
+                        // position: 'absolute',
+                        // top: '40px',
+                        // left: '40px',
+                        // right: '40px',
+                        // bottom: '40px',
+                        border: '1px solid #ccc',
+                        background: '#253344',
+                        overflow: 'auto',
+                        WebkitOverflowScrolling: 'touch',
+                        borderRadius: '4px',
+                        outline: 'none',
+                        padding: '20px'
+                    }
+                }}
+            >
+                <>
+                    <AddStock
+                        handleAddStockClose={handleAddStockClose}
+                    />
+                </>
+            </ReactModal>
+
+            <ReactModal
+                isOpen={openBuyTicker}
+                onRequestClose={handleCloseBuyTicker}
+                className="myModal"
+                overlayClassName="modalOverlay"
+                closeTimeoutMS={500}
+                // shouldCloseOnOverlayClick={false}
+                style={{
+                    content: {
+                        border: '1px solid #ccc',
+                        background: '#253344',
+                        overflow: 'auto',
+                        WebkitOverflowScrolling: 'touch',
+                        borderRadius: '4px',
+                        outline: 'none',
+                        padding: '20px'
+                    }
+                }}
+            >
+                <>
+                    <BuyTicker
+                        handleCloseBuyTicker={handleCloseBuyTicker}
+                        stockItemID={stockItemID}
+                    />
+                </>
+            </ReactModal>
+
+            <ReactModal
+                isOpen={openSellTicker}
+                onRequestClose={handleOpenSellTicker}
+                className="myModal"
+                overlayClassName="modalOverlay"
+                closeTimeoutMS={500}
+                // shouldCloseOnOverlayClick={false}
+                style={{
+                    content: {
+                        border: '1px solid #ccc',
+                        background: '#253344',
+                        overflow: 'auto',
+                        WebkitOverflowScrolling: 'touch',
+                        borderRadius: '4px',
+                        outline: 'none',
+                        padding: '20px'
+                    }
+                }}
             >
                 <EditTicker
                     handleCloseEditTicker={handleCloseEditTicker}
