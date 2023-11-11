@@ -72,8 +72,10 @@ export const DataTableView = (props) =>{
         setOpenBuyTicker(false)
     }
 
-    const handleCloseEditTicker=()=>{
-        setOpenEditTicker(false)
+    const handleOpenSellTicker = (e, stock_item_id)=>{
+        console.log('DataTableView, handleOpenBuyTicker, stock_item_id: ', stock_item_id)
+        setOpenSellTicker(true)
+        setStockItemID(stock_item_id)
     }
     return(
         <>
