@@ -77,6 +77,17 @@ export const DataTableView = (props) =>{
         setOpenSellTicker(true)
         setStockItemID(stock_item_id)
     }
+    const handleCloseSellTicker=()=>{
+        setOpenSellTicker(false)
+    }
+//----------------- handlers ------------------------ //
+    const handleAddStock = (e) => {
+        setOpenAddStockModal(true)
+    }
+    const handleAddStockClose = (e) => {
+        setOpenAddStockModal(false)
+    }
+
     return(
         <>
             <TableContainer >
