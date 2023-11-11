@@ -36,6 +36,29 @@ export const DataTableView = (props) =>{
     const [stockItemList, setStockItemList] = useState([])
     const [stockItemID, setStockItemID] = useState(null)
 
+    useEffect(  () => {
+
+        axios({
+            url: `${url_stock_item_list}`,
+            method: "GET",
+        }).then( res => {
+            setIsLoading(false)
+            if(res.status === 200){
+                console.log('DataTableView, stock_item: ', res.status)
+                console.log('DataTableView, stock_item: ', res.data)
+                setStockItemList(res.data)
+                if(res.data?.length == 0){
+                    // setAddPortfolio(true)
+                    setIsStockItemEmpty(true)
+                }
+                // setPortfolioResult(res.data[0])
+            }
+        }).catch( error => {
+            setIsLoading(false)
+            console.log('DataTableView, stock_item error: ', error)
+        })
+
+    }, [])
 
 
 //----------------- open add Close modal ------------------------ //
