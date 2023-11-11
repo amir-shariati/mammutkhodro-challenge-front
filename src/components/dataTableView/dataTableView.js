@@ -126,23 +126,36 @@ export const DataTableView = (props) =>{
 
                                     <TableBody>
 
-                        <TableRow >
-                            <TableCell style={{color:'#fff'}} component="th" scope="row">
-                                1
-                            </TableCell>
-                            <TableCell style={{color:'#fff'}} align="right">BTC</TableCell>
-                            <TableCell style={{color:'#fff'}} align="right">$ 28,176 </TableCell>
-                            <TableCell style={{color:'#fff'}} align="right">1</TableCell>
-                            <TableCell style={{color:'#fff'}} align="right">89.87%</TableCell>
-                            <TableCell style={{color:'#81a94e'}} align="right">$ 1,285.67</TableCell>
-                            <TableCell style={{color:'#fff'}} align="right">$ 28,176 </TableCell>
-                            <TableCell style={{color:'#84ad51'}} align="right">4.78%</TableCell>
-                            <TableCell style={{color:'#fff'}} align="right">
-                                <IconButton onClick={handleOpenEditTicker}>
-                                    <EditIcon  style={{color:'#fff'}} />
-                                </IconButton>
-                            </TableCell>
-                        </TableRow>
+                                        {
+                                            stockItemList?.map( (stock, index)=>(
+                                                <TableRow >
+                                                    <TableCell style={{color:'#fff'}} component="th" scope="row">
+                                                        {index}
+                                                    </TableCell>
+
+                                                    <TableCell style={{color:'#fff'}} align="right">{stock.id}</TableCell>
+                                                    <TableCell style={{color:'#fff'}} align="right">{stock.amount_stock_item}</TableCell>
+                                                    <TableCell style={{color:'#fff'}} align="right">{stock.id}</TableCell>
+
+                                                    <TableCell style={{color:'#fff'}} align="right">
+                                                        {/*<IconButton onClick={handleOpenBuyTicker}>*/}
+                                                        <IconButton onClick={(e)=>handleOpenBuyTicker(e, stock.id)}>
+                                                            {/*<EditIcon  style={{color:'#fff'}} />*/}
+                                                            <ArrowDownwardIcon style={{color:'#fff'}} />
+                                                        </IconButton>
+                                                    </TableCell>
+
+                                                    <TableCell style={{color:'#fff'}} align="right">
+                                                        {/*<IconButton onClick={handleOpenSellTicker}>*/}
+                                                        <IconButton onClick={(e)=>handleOpenSellTicker(e, stock.id)}>
+                                                            {/*<EditIcon  style={{color:'#fff'}} />*/}
+                                                            <ArrowUpwardIcon  style={{color:'#fff'}} />
+                                                        </IconButton>
+                                                    </TableCell>
+
+                                                </TableRow>
+                                            ))
+                                        }
 
                     </TableBody>
                 </Table>
