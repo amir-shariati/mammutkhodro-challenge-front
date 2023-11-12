@@ -7,6 +7,9 @@ export const DetailsCard =()=>{
 
     const classes = portfolioStyles()
 
+    const [isLoading, setIsLoading] = useState(true)
+    const portfolio = useContext(PortfolioContext);
+
     return(
         <>
             <Grid container >
