@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useContext} from 'react'
 import {Divider, Grid, Typography} from "@mui/material";
 import {portfolioStyles} from "../portfolioTracker/style";
 import {PortfolioContext} from '../../contexts'
