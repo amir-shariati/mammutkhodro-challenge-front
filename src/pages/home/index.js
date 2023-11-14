@@ -91,6 +91,7 @@ const Home = (props) => {
                 if(res.status == 201){
                     // console.log('Home, portfolio: ', res.status)
                     console.log('Home, add portfolio: ', res.data)
+                    setPortfolioResult(res.data)
 
                     setAddPortfolio(false)
                     setOpenPortfolioModal(false)
