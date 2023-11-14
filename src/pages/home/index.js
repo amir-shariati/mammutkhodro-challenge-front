@@ -8,6 +8,7 @@ import {homeStyles} from "./style";
 import {PortfolioTracker} from "../../components/portfolioTracker/portfolioTracker";
 import {url_portfolio_list} from "../../config";
 import {BarLoader, ClipLoader, MoonLoader} from "react-spinners";
+import {PortfolioContext} from '../../contexts'
 
 
 const Home = (props) => {
