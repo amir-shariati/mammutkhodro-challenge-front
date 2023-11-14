@@ -128,7 +128,7 @@ const Home = (props) => {
                                             <Grid container >
                                                 <Grid item xs={12} md={12} lg={12} xl={12}>
                                                     <h1>Loading</h1>
-                                                    <BarLoader color="#36d7b7" width={400} height={4} />
+                                                    <BarLoader color="#36d7b7" width={'100%'} height={4} />
                                                 </Grid>
                                             </Grid>
                                         </div>
