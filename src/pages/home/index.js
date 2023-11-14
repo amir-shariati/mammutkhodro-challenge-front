@@ -161,7 +161,10 @@ const Home = (props) => {
                                             </div>
                                         </>
                                     ):(
-                                        <PortfolioTracker />
+                                        <PortfolioContext.Provider value={portfolioResult}>
+                                            <PortfolioTracker />
+                                        </PortfolioContext.Provider>
+                                        // <PortfolioTracker />
                                     )
                                 )
                             }
