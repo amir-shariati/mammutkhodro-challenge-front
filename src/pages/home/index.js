@@ -34,7 +34,7 @@ const Home = (props) => {
             method: "GET",
         }).then( res => {
             setIsLoading(false)
-            if(res.status == 200){
+            if(res.status === 200){
                 console.log('Home, portfolio: ', res.status)
                 console.log('Home, portfolio: ', res.data)
                 if(res.data?.length == 0){
