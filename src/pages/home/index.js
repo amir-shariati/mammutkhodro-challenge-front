@@ -40,6 +40,7 @@ const Home = (props) => {
                 if(res.data?.length == 0){
                     setAddPortfolio(true)
                 }
+                setPortfolioResult(res.data[0])
             }
         }).catch( error => {
             setIsLoading(false)
