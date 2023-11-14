@@ -25,6 +25,8 @@ const Home = (props) => {
     const [isLoadingAddBtnPortfolio, setIsLoadingAddBtnPortfolio] = useState(false)
     const [disableAddBtnPortfolio, setDisableAddBtnPortfolio] = useState(false)
 
+    const [portfolioResult, setPortfolioResult] = useState(null)
+
     useEffect(  () => {
 
         axios({
